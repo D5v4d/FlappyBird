@@ -1,6 +1,5 @@
 #game {
     background-color: rgb(78, 192, 202);
-    touch-action: none;
 }
 
 .score {

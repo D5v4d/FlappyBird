@@ -69,7 +69,7 @@ class Controlling {
         const gaveRestart = (event) => {
             canvas.removeEventListener('click', gaveRestart);
             ['touchstart'].forEach((evt) =>
-                canvas.addEventListener(evt, this.startHandle)
+                canvas.removeEventListener(evt, this.startHandle)
             );
             this.x = event.offsetX;
             this.y = event.offsetY;
