@@ -34,10 +34,7 @@ class Controlling {
 
         const startGame = () => {
 
-            ['touchstart'].forEach((evt) =>
-                canvas.addEventListener(evt, this.startHandle)
-            );
-            // canvas.addEventListener('click', this.startHandle);
+            canvas.addEventListener('click', this.startHandle);
             canvas.addEventListener('click', this.startGameHandler);
         }
         startGame();
@@ -68,9 +65,8 @@ class Controlling {
 
         const gaveRestart = (event) => {
             canvas.removeEventListener('click', gaveRestart);
-            ['touchstart'].forEach((evt) =>
-                canvas.removeEventListener(evt, this.startHandle)
-            );
+            canvas.removeEventListener('click', this.startHandle)
+
             this.x = event.offsetX;
             this.y = event.offsetY;
 
