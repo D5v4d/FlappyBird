@@ -36,7 +36,7 @@ class Controlling {
 
 
         const startGame = () => {
-            ['touchstart', 'mousedown'].forEach((evt) =>
+            ['touchstart'].forEach((evt) =>
                 canvas.addEventListener(evt, this.startHandle)
               );
             canvas.addEventListener('click', this.startGameHandler);
