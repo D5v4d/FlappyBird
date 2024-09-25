@@ -31,14 +31,12 @@ class Controlling {
     startInfo() {
         this.config.bird.startX = 200;
         this.draw.startInfoVisible = true;
-
-
-
-
+        
         const startGame = () => {
-            ['touchstart', 'mousedown'].forEach((evt) =>
+            ['click', 'touchstart'].forEach((evt) =>
                 canvas.addEventListener(evt, this.startHandle)
               );
+            // canvas.addEventListener('click', this.startHandle);
             canvas.addEventListener('click', this.startGameHandler);
         }
         startGame();
