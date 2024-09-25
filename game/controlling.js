@@ -31,11 +31,12 @@ class Controlling {
     startInfo() {
         this.config.bird.startX = 200;
         this.draw.startInfoVisible = true;
-        
+
         const startGame = () => {
-            ['click', 'touchstart'].forEach((evt) =>
+
+            ['touchstart'].forEach((evt) =>
                 canvas.addEventListener(evt, this.startHandle)
-              );
+            );
             // canvas.addEventListener('click', this.startHandle);
             canvas.addEventListener('click', this.startGameHandler);
         }
@@ -48,7 +49,7 @@ class Controlling {
         // Запуск игры и обработка птицы
         this.bird.gravity();
         canvas.removeEventListener('click', this.startGameHandler);
-        
+
     }
 
     startHandle() {
