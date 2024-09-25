@@ -55,15 +55,15 @@ class Bird {
 
 
             // Ускорение игры при достижении определенного количества очков
-            if (this.score == 1 && this.config.tubes.speed == 1.1) {
+            if (this.score == 10 && this.config.tubes.speed == 1.1) {
                 this.draw.indexland += 0.25;
                 this.config.tubes.speed += 0.21;
                 console.log(this.config.tubes.speed)
-            } else if (this.score == 3 && this.config.tubes.speed == 1.31) {
+            } else if (this.score == 20 && this.config.tubes.speed == 1.31) {
                 this.draw.indexland += 0.25;
                 this.config.tubes.speed += 0.21;
                 console.log(this.config.tubes.speed)
-            } else if (this.score == 5 && this.config.tubes.speed == 1.52) {
+            } else if (this.score == 30 && this.config.tubes.speed == 1.52) {
                 this.draw.indexland += 0.5;
                 this.config.tubes.speed += 0.21;
                 console.log(this.config.tubes.speed)
