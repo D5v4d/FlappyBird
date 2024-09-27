@@ -32,6 +32,9 @@ class Controlling {
         this.draw.startInfoVisible = true;
 
         const startGame = () => {
+            ['click','keydown'].forEach((e) => {
+                canvas.addEventListener(e, this.startHandle);
+            })
             canvas.addEventListener('click', this.startHandle);
             canvas.addEventListener('click', this.startGameHandler);
         }
