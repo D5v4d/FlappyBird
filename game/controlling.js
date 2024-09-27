@@ -12,15 +12,15 @@ class Controlling {
     start() {
         if (this.draw.isButtonVisible) {
             canvas.addEventListener('click', this.startButtonHandler);
-            console.log(this.bird.record)
         }
     }
 
     startButtonHandler(event) {
         let x = event.offsetX;
         let y = event.offsetY;
+        console.log(x, y)
 
-        if (x > 110 && x < 210 && y > 360 && y < 390) {
+        if (x > this.config.coordinatesbBtn.leftX && x < this.config.coordinatesbBtn.rightX && y > this.config.coordinatesbBtn.topY && y < this.config.coordinatesbBtn.bottomY) {
             this.swooshing.play()
             this.draw.isButtonVisible = false;
             canvas.removeEventListener('click', this.startButtonHandler); // Удаление обработчика
@@ -29,11 +29,9 @@ class Controlling {
     }
 
     startInfo() {
-        this.config.bird.startX = 200;
         this.draw.startInfoVisible = true;
 
         const startGame = () => {
-
             canvas.addEventListener('click', this.startHandle);
             canvas.addEventListener('click', this.startGameHandler);
         }
@@ -46,15 +44,11 @@ class Controlling {
         // Запуск игры и обработка птицы
         this.bird.gravity();
         canvas.removeEventListener('click', this.startGameHandler);
-
     }
 
     startHandle() {
         this.bird.flight();
     }
-
-
-
 
     restart() {
         setInterval(() => {
@@ -70,7 +64,7 @@ class Controlling {
             this.x = event.offsetX;
             this.y = event.offsetY;
 
-            if (this.x > 110 && this.x < 210 && this.y > 360 && this.y < 390) {
+            if (this.x > this.config.coordinatesbBtn.leftX && this.x < this.config.coordinatesbBtn.rightX && this.y > this.config.coordinatesbBtn.topY && this.y < this.config.coordinatesbBtn.bottomY) {
                 this.swooshing.play()
                 result.innerHTML = ``
                 records.innerHTML = ``
@@ -78,17 +72,5 @@ class Controlling {
                 game.startGame()
             }
         }
-
-
-
     }
-
-
-
-
-
-
-    reset() {
-    }
-
 }

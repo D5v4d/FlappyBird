@@ -1,5 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+#conteiner {
+    margin: auto;
+}
+
 #game {
     background-color: rgb(78, 192, 202);
+    margin: 0 auto;
 }
 
 .score {
@@ -18,14 +28,10 @@
     width: 60px;
     text-align: right;
     font-size: 35px;
-    margin-left: 215px;
-    margin-top: 227px;
 }
 
 #record {
     width: 60px;
     text-align: right;
     font-size: 35px;
-    margin-left: 215px;
-    margin-top: 282px;
 }
