@@ -105,5 +105,6 @@ class Bird {
         this.velocity = 1;
         this.score = 0;
         this.isFalling = false;
+        this.audioHit = true;
     }
 }
